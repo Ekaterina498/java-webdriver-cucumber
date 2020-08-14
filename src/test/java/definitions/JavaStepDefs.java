@@ -143,6 +143,8 @@ public class JavaStepDefs {
             System.out.println("i less than d!");
         }
 
+
+
     }
 
     @And("I work with arrays")
@@ -165,8 +167,7 @@ public class JavaStepDefs {
         }
         System.out.println("Second out of fruits: " + fruits[1]);
 
-        String str1 = new String("value");
-        Integer int1 = new Integer("5");
+
 
 
         List<Integer> listOfNums = new ArrayList<>();
@@ -184,8 +185,14 @@ public class JavaStepDefs {
         for (String fruit : listOfFruits) {
             System.out.print(fruit + " ");
         }
+
+
+        for (String fruit : listOfFruits) {
+            System.out.print(fruit + " ");
+        }
     }
 }
+
 
 
 
