@@ -17,12 +17,11 @@ public class JavaStepDefs {
 
         String firstName = "Ekaterina";
         String lastName = "Filatova";
-        System.out.println("Full name: " +firstName+ " " +lastName);
+        System.out.println("Full name: " + firstName + " " + lastName);
 
         String greeting = "Hello";
         String text = "I'm an engineer";
-        System.out.println(greeting + ", " +text);
-
+        System.out.println(greeting + ", " + text);
 
 
     }
@@ -34,11 +33,10 @@ public class JavaStepDefs {
 
         String question = "Who said?";
         String message1 = "Ben says: ";
-        System.out.println(question + " " +message1+ " :)) " +message);
+        System.out.println(question + " " + message1 + " :)) " + message);
 
         message = message.toUpperCase();
         System.out.println(message);
-
 
 
     }
@@ -51,8 +49,8 @@ public class JavaStepDefs {
 
     @And("I perform actions with {string} and {string}")
     public void iPerformActionsWithAnd(String str1, String str2) {
-        System.out.println("str1: " + str1 );
-        System.out.println("str2: " + str2 );
+        System.out.println("str1: " + str1);
+        System.out.println("str2: " + str2);
 
         System.out.println("str1 upperCase: " + str1.toUpperCase());
         System.out.println("str2 upperCase: " + str2.toUpperCase());
@@ -76,17 +74,15 @@ public class JavaStepDefs {
         System.out.println(var.toUpperCase());
 
 
-        boolean b =str1.equals(str2);
+        boolean b = str1.equals(str2);
         if (b) {
             // gets inside if true
             System.out.println("String equal each other!");
 
-        }else {
+        } else {
             // gets inside if false
             System.out.println("String do not equal each other!");
         }
-
-
 
 
     }
@@ -94,24 +90,24 @@ public class JavaStepDefs {
     @Given("I open login page")
     public void iOpenLoginPage() {
         System.out.println("Open login");
-        
+
     }
 
     @And("I enter valid credentials for {string}")
     public void iEnterValidCredentialsFor(String user) {
         System.out.println("Entering creds for " + user);
-        
+
     }
 
     @And("I calculate numbers")
     public void iCalculateNumbers() {
 
-        System.out.println(10.0/3);
-        System.out.println(10%3);
-        System.out.println(9%3);
-        System.out.println(21%3);
-        System.out.println(22%3);
-        System.out.println(23%3);
+        System.out.println(10.0 / 3);
+        System.out.println(10 % 3);
+        System.out.println(9 % 3);
+        System.out.println(21 % 3);
+        System.out.println(22 % 3);
+        System.out.println(23 % 3);
 
         int i = 5;
         Integer index = 5;
@@ -136,13 +132,12 @@ public class JavaStepDefs {
 
             System.out.println("i more than d!");
 
-        }else if (i == d){
+        } else if (i == d) {
 
             System.out.println("i equeals d!");
-        }else {
+        } else {
             System.out.println("i less than d!");
         }
-
 
 
     }
@@ -151,7 +146,7 @@ public class JavaStepDefs {
     public void iWorkWithArrays() {
         int[] nums = {5, 2, 5, 7, 10, 11, 1};
         nums[0] = 7;
-        double[] doubles = {5.0, 2, 5, 7, 10, 11, 1 };
+        double[] doubles = {5.0, 2, 5, 7, 10, 11, 1};
 
 
         System.out.println(nums);
@@ -167,7 +162,8 @@ public class JavaStepDefs {
         }
         System.out.println("Second out of fruits: " + fruits[1]);
 
-
+        String str1 = new String("value");
+        Integer int1 = new Integer(5);
 
 
         List<Integer> listOfNums = new ArrayList<>();
@@ -188,6 +184,78 @@ public class JavaStepDefs {
             System.out.print(fruit + " ");
         }
 
+
+    }
+
+    @And("I print url for {string}")
+    public void iPrintUrlFor(String site) {
+        switch (site) {
+            case "google":
+                System.out.println("http://www.goole.com/");
+                break;
+            case "sample":
+                System.out.println("https://skryabin.com/webdriver/html/sample.html");
+                break;
+            case "youtube":
+                System.out.println("https://www.youtube.com/");
+                break;
+            case "yahoo":
+                System.out.println("https://www.yahoo.com/");
+                break;
+        }
+
+        if (site.equalsIgnoreCase("google")) {
+            System.out.println("http://www.goole.com/");
+        } else if (site.equalsIgnoreCase("sample")) {
+            System.out.println("https://skryabin.com/webdriver/html/sample.html");
+        } else if (site.equalsIgnoreCase("youtube")) {
+            System.out.println("https://www.youtube.com/");
+        } else if (site.equalsIgnoreCase("yahoo")) {
+            System.out.println("ttps://www.yahoo.com/");
+        } else {
+            System.out.println("No supported site! Actual: " + site);
+        }
+
+    }
+
+
+
+    @And("I print if number {int} is positive")
+    public void iPrintIfNumberIsPositive(int number) {
+
+        if(number > 0) {
+            System.out.println("positive");
+        }else{
+            System.out.println("negative");
+        }
+    }
+
+    @And("I print {int} th day of week")
+    public void iPrintThDayOfWeek(int day) {
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+            default:
+                System.out.println("Not supported day");
+        }
 
     }
 }
