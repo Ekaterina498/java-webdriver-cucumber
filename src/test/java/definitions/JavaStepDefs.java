@@ -178,6 +178,8 @@ public class JavaStepDefs {
             System.out.println(i);
         }
 
+
+        //some comment
         List<String> listOfFruits = new ArrayList<>();
         listOfFruits.add("kiwi");
         listOfFruits.add("apple");
@@ -186,7 +188,7 @@ public class JavaStepDefs {
             System.out.print(fruit + " ");
         }
 
-        
+
     }
 }
 
