@@ -186,10 +186,7 @@ public class JavaStepDefs {
             System.out.print(fruit + " ");
         }
 
-
-        for (String fruit : listOfFruits) {
-            System.out.print(fruit + " ");
-        }
+        
     }
 }
 
